@@ -1,0 +1,47 @@
+#include<string.h>
+#include <stdio.h>
+
+struct students{
+    char name[20];
+    int age;
+     long int ph_no;
+    int salary;
+
+}s[10];
+
+int main()
+{
+    struct students s[100];
+    int i=0,n;
+    printf("Enter the number of details to be entered:\n");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the name:\n");
+        scanf("%s",&s[i].name);
+        printf("Enter the age:\n ");
+        scanf("%d",&s[i].age);
+        printf("Enter the Phone number:\n");
+        scanf("%ld",&s[i].ph_no);
+        printf("Enter the salary:\n");
+        scanf("%d",&s[i].salary);
+
+
+
+    }
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+      printf("<<<<<The details Entered are :>>>>>\n");
+      printf("NAME= %s\n",s[i].name);
+      printf("Age is=%d\n",s[i].age);
+      printf("The phone number is= %ld\n",s[i].ph_no);
+      printf("The salary is=%d\n",s[i].salary);
+
+
+
+    }
+
+    return 0;
+}
